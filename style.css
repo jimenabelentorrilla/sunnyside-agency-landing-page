@@ -21,11 +21,12 @@
 body {
     margin: 0;
     padding: 0;
+    max-width: 1440px;
 }
 
-.row {
-    padding-left: 0;
-    padding-right: 0;
+.col-lg-6,
+.col-lg-12 {
+    padding: 0;
 }
 
 .header {
@@ -60,7 +61,7 @@ body {
 .list-flex li {
     font-family: 'Barlow', sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .list-flex li:hover {
@@ -75,8 +76,7 @@ body {
     font-family: 'Fraunces', serif;
     font-weight: 700;
     border: none;
-    background-color: var(--white);
-    padding: 18px 28px;
+    padding: 12px 25px;
     border-radius: 50px;
 }
 
@@ -99,7 +99,7 @@ body {
     text-transform: uppercase;
     color: var(--white);
     letter-spacing: 10px;
-    font-size: 60px;
+    font-size: 53px;
     padding: 80px
 }
 
@@ -131,20 +131,43 @@ body {
     font-family: 'Barlow', sans-serif;
     font-size: 18px;
     color: var(--dark-grayish-blue);
-    font-weight: 600;
+    font-weight: 500;
     padding: 10px;
 }
 
 .btn-egg,
-.btn-egg {
+.btn-pink {
     font-family: 'Fraunces', serif;
     color: var(--very-dark-desaturated-blue);
     text-transform: uppercase;
     font-size: 17px;
     font-weight: 900;
+    background: none;
     border: none;
-    background-color: var(--white);
-    padding: 10px;
+}
+
+.btn-egg::after {
+    content: '';
+    height: 13px;
+    width: 100%;
+    background-color: rgb(251 242 175);
+    display: block;
+    border-radius: 50px;
+    margin-top: -8px;
+}
+
+.btn-pink::after {
+    content: '';
+    height: 13px;
+    width: 100%;
+    background-color: #FEDCDB;
+    display: block;
+    border-radius: 50px;
+    margin-top: -8px;
+}
+
+.img-egg-pink {
+    width: 675px;
 }
 
 
@@ -198,6 +221,10 @@ body {
     font-weight: 600;
 }
 
+.img-cherry-mandarine {
+    width: 675px;
+}
+
 
 /****testimonials******/
 
@@ -235,7 +262,7 @@ body {
 
 .testimonial-paragraph {
     font-family: 'Barlow', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--very-dark-grayish-blue);
     text-align: center;
     padding: 40px;
@@ -266,7 +293,7 @@ body {
 }
 
 .gallery img {
-    width: 368px;
+    width: 337px;
 }
 
 
@@ -283,7 +310,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 36px;
 }
 
 .footer-img {
@@ -292,19 +319,21 @@ body {
 
 .footer-list {
     font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .footer-list ul {
     display: flex;
-    gap: 63px;
-    color: var(--white);
+    flex-direction: row;
+    gap: 57px;
+    color: var(--dark-desaturated-cyan);
+    padding: 0px;
 }
 
 .footer-list ul li:hover {
     cursor: pointer;
-    color: var(--dark-desaturated-cyan);
+    color: var(--white)
 }
 
 .footer-social-media {
@@ -312,8 +341,10 @@ body {
     flex-direction: row;
     gap: 25px;
     padding: 33px;
+    color: hsl(167, 40%, 24%);
 }
 
 .footer-social-media i:hover {
     cursor: pointer;
+    color: var(--white);
 }
